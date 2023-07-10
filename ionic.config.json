@@ -1,0 +1,7 @@
+{
+  "name": "keychain-generator-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
