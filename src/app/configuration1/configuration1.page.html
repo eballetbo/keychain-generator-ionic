@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Configuration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Configuration</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="general_render">
+    <div id="svg-render" [innerHTML]="generateSvgService.prova">
+      
+    </div>
+    <hr/>
+  
+
+    <div class="input-holder">
+      <label>Google font: 
+          <select 
+              id="fontSelector" 
+              class="input"
+              [(ngModel)]="generateSvgService.selected_font"
+              (ngModelChange)="generateSvgService.renderCurrent()"
+              >
+              <option value="ABeeZee" style="font-family: 'ABeeZee', sans-serif;">ABeeZee</option>
+              <option value="Acme" style="font-family: 'Acme', sans-serif;">Acme</option>
+              <option value="Bree Serif" style="font-family: 'Bree Serif', sans-serif;">Bree Serif</option>
+              <option value="Oswald" style="font-family: 'Oswald', sans-serif;">Oswald</option>
+              <option value="Old Standard TT" style="font-family: 'Old Standard TT', sans-serif;">Old Standard TT</option>
+
+          </select>
+      </label>
+    </div>
+
+    <div class="input-holder">
+        <label>text: 
+            <input 
+                type="text" 
+                id="input-text" 
+                value="Verb" 
+                class="input-text input" 
+                [(ngModel)]="generateSvgService.text_input" 
+                (ngModelChange)="changeDivSize('input-text')"
+                />
+        </label>
+
+    </div>
+  
+    <ion-button expand="full" routerLink="/configuration2" id="nextButton">Next</ion-button>
+  </div>
+
+</ion-content>

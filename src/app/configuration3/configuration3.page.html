@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Configuration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Configuration</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="general_render">
+    <div id="svg-render" [innerHTML]="generateSvgService.prova">
+    </div>
+    <hr/>
+
+
+    <div class="input-holder" id="input-holder-button">
+      <button id="bt_download" (click)="generateSvgService.downloadSVG()">Download</button>
+    </div>
+
+  </div>
+</ion-content>
